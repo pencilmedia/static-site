@@ -42,8 +42,8 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: 'assets/',
-            src: ['**', '!styles/**'],
-            dest: 'dist/'
+            src: ['**', '!styles/**', '!scss/**'],
+            dest: 'dist/assets/'
           }
         ],
       },
@@ -53,7 +53,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'bower_components/',
             src: ['**'],
-            dest: 'dist/vendor/'
+            dest: 'dist/assets/vendor/'
           }
         ],
       }
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
         tasks: ['copy:main']
       },
       sass: {
-        files: ['main.scss'],
+        files: ['assets/scss/main.scss'],
         tasks: ['sass', 'cssmin']
       },
       assets: {
@@ -87,7 +87,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'dist/main.css': 'main.scss'
+          'dist/assets/css/main.css': 'assets/scss/main.scss'
         }
       }
     },
@@ -96,9 +96,9 @@ module.exports = function (grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'dist',
+          cwd: 'dist/assets/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'dist',
+          dest: 'dist/assets/css',
           ext: '.min.css'
         }]
       }
@@ -108,9 +108,9 @@ module.exports = function (grunt) {
       assets: {
         files: [{
           expand: true,
-          cwd: 'dist/images',
+          cwd: 'dist/assets/images',
           src: ['**/*.{png,jpg,gif,svg, ico}'],
-          dest: 'dist/images'
+          dest: 'dist/assets/images'
         }]
       }
     },
@@ -133,10 +133,10 @@ module.exports = function (grunt) {
     npmcopy: {
       dist: {
         options: {
-          destPrefix: 'dist/vendor'
+          destPrefix: 'dist/assets/vendor'
         },
         files: {
-          'js/jquery/jquery.js': 'jquery/dist/jquery.min.js'
+          'jquery/jquery.js': 'jquery/dist/jquery.min.js'
         }
       }
     },
@@ -148,7 +148,7 @@ module.exports = function (grunt) {
         ]
       },
       dist: {
-        src: 'assets/styles/*.scss'
+        src: 'assets/scss/*.scss'
       }
     },
 
