@@ -1,6 +1,7 @@
-# Joel Nave Portfolio
+# Static Site
+## Based on Yeoman simple-static-site
 
-Static HTML site for Joel Nave Portfolio.
+Static HTML/CSS/JS site/app for projects or scratchsheet
 
 Requirements:
 
