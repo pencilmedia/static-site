@@ -133,10 +133,11 @@ module.exports = function (grunt) {
     npmcopy: {
       dist: {
         options: {
-          destPrefix: 'dist/assets/vendor'
+          destPrefix: 'dist/assets'
         },
         files: {
-          'jquery/jquery.js': 'jquery/dist/jquery.min.js'
+          'js/jquery.slim.min.js': 'node_modules/jquery/dist/jquery.slim.min.js',
+          'js/fastclick.js': 'node_modules/fastclick/lib/fastclick.js'
         }
       }
     },
