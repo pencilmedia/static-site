@@ -1,7 +1,13 @@
 body {
      font-family: 'Helvetica Nueue', Arial, Helvetica, sans-serif;
+     -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+     font-smoothing: antialiased;
      font-size: 14px;
      color: #ccc;
-     padding: 5% 1rem;
+     padding: 1rem;
      background: #111;
+}
+p {
+     margin: 0 0 1.25rem 0;
 }
