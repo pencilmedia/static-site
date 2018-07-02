@@ -15,11 +15,11 @@ To build execute:
 
     $ npm run build
 
-To test:
+To test and dev
 
     $ npm run start
 
-And open http://localhost:8000 in your browser.
+    opens http://localhost:8000 in your browser.
 
 To clean build:
 

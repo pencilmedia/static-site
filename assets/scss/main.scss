@@ -1,12 +1,20 @@
+
+// CSS Variables
+:root {
+     --font-main: 'Helvetica Nueue', Arial, Helvetica, sans-serif;
+     --text-color: #333;
+}
+
 body {
-     font-family: 'Helvetica Nueue', Arial, Helvetica, sans-serif;
+     font-family: var(--font-main);
+     font-size: 14px;
+     color: var(--text-color, #333);// var, fallback
      -webkit-font-smoothing: antialiased;
      -moz-font-smoothing: antialiased;
      font-smoothing: antialiased;
-     font-size: 14px;
-     color: #ccc;
-     padding: 1rem;
-     background: #111;
+}
+main {
+     padding: 1rem;   
 }
 p {
      margin: 0 0 1.25rem 0;
